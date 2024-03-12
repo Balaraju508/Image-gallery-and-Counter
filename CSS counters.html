@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CSS counters</title>
+        <style>
+            body{
+                margin: 20px;
+                counter-reset: one;
+                background-color: burlywood;
+            }
+            h2{
+                font-family: Arial, Helvetica, sans-serif;
+                counter-reset: two;
+                background-color: rgb(255, 71, 178);
+                color:rgb(48, 49, 5);
+            }
+            p{
+                font-family: monospace;
+                font-size: 20px;
+            }
+            h2::before{
+                content: counter(one);
+                counter-increment: one;
+                padding-right: 20px;
+            }
+            p::before{
+                content:counter(one) "." counter(two);
+                counter-increment: two;
+                padding-right: 5px;
+                font-family: cursive;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div>
+            <h2>CSE</h2>
+            <p>Java</p>
+            <p>Python</p>
+            <p>C</p>
+            <p>C++</p>
+            <p>SQL</p>
+            <p>HTML</p>
+        </div>
+        <div>
+            <h2>ECE</h2>
+            <p>Nt</p>
+            <p>Embedded systems</p>
+            <p>DLD</p>
+            <p>VLSI</p>
+            <p>Cn</p>
+        </div>
+        <div>
+            <h2>EEE</h2>
+            <p>DLD</p>
+            <p>Python</p>
+            <p>C</p>
+            <p>C++</p>
+            <p>SQL</p>
+            <p>HTML</p>
+        </div>
+    </body>
+</html>
